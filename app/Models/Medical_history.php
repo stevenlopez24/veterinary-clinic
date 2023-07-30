@@ -25,6 +25,9 @@ class Medical_history extends Model
     //     'email',
     //     'password',
     // ];
+    protected $table = 'medical_history';
+    protected $primaryKey = 'id_medical_history';
+
     protected $guarded = ['id_medical_history', 'pet', 'create_time', 'update_time', 'state_record'];
 
     /**

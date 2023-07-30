@@ -1,13 +1,42 @@
 {
     "(and :count more error)": "(y :count error más)",
+
     "Users":"Usuarios",
-    "Pets management":"Gestión de Mascotas",
-    "NAME_PET":"Nombre",
+    "MEDICAL_RECORD_MANAGEMENT":"GESTIÓN DE HISTORIAL MÉDICO",
+    
+
+    "NAME_PET":"Mascota",
+    "NAME":"Nombre",
+    "EMAIL":"Correo",
+    "ROLE":"Rol",
     "BREED":"Raza",
     "GENDER":"Genero",
     "NAME_CUSTOMER":"Propietario",
     "DOCUMENT":"Documento",
+    "DOCUMENT_TYPE":"Tipo de documento",
+    "ATTENDED":"Atendido",
+    "TEMPERATURE":"Temperatura",
+    "WEIGHT":"Peso",
+    "HEART_RATE":"Frecuencia cardiaca",
+    "OBSERVATION":"Observación",
+
+    "CREATE_TIME":"Fecha de creación",
+    "UPDATE_TIME":"Fecha de modificación",
+
+    "Medical record management":"GESTIÓN DE REGISTROS MÉDICOS",
+    "MEDICAL_HISTORY_INFORMATION":"INFORMACIÓN DEL HISTORIAL MÉDICO",
+    "MEDICAL_RECORD_DETAILS":"DETALLES DEL REGISTRO MÉDICO",
+
+    "OWNER_DATA":"DATOS DEL PROPIETARIO",
+    "PET_DATA":"DATOS DE LA MASCOTA",
+    "STATE_RECORD":"Estado",
+    "RECORD":"REGISTRO",
+
+
     "See More":"Ver más",
+    "Return":"Salir",
+    "Disable":"Eliminar",
+    "Edit":"Editar",
     
 
     "(and :count more errors)": "(y :count errores más)",

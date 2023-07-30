@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\PetController;
-use App\Http\Controllers\Detail_history;
+use App\Http\Controllers\Detail_historyController;
+use App\Http\Controllers\Medical_historyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +29,12 @@ Route::get('management/users', [App\Http\Controllers\UserController::class, 'ind
 
 
 
-Route::get('management/pets', [App\Http\Controllers\PetController::class, 'index'])->name('pets');
-Route::get('/pets/{id}/distroy', [App\Http\Controllers\PetController::class, 'destroy'])->name('pet.delete');
+Route::get('management/medical_history', [App\Http\Controllers\Medical_historyController::class, 'index'])->name('medical_history.index');
+Route::get('management/medical_history/{m_h}', [App\Http\Controllers\Medical_historyController::class, 'show'])->name('medical_history.show');
+Route::get('management/medical_history/{id}/distroy', [App\Http\Controllers\Medical_historyController::class, 'destroy'])->name('medical_history.delete');
 
 
 
-Route::get('management/details_history', [App\Http\Controllers\Detail_historyController::class, 'index'])->name('detail_history');
+Route::get('management/detail_history', [App\Http\Controllers\Detail_historyController::class, 'index'])->name('detail_history.index');
+Route::get('management/detail_history/{deta}', [App\Http\Controllers\Detail_historyController::class, 'show'])->name('detail_history.show');
+Route::get('management/detail_history/{id}/distroy', [App\Http\Controllers\Detail_historyController::class, 'destroy'])->name('detail_history.delete');

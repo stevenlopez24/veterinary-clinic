@@ -25,6 +25,9 @@ class Pet extends Model
     //     'email',
     //     'password',
     // ];
+
+    protected $primaryKey = 'id_pet';
+
     protected $guarded = ['id_pet', 'name', 'breed', 'gender', 'id_customer', 'create_time', 'update_time', 'state_record'];
 
     /**

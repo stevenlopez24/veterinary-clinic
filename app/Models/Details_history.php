@@ -25,6 +25,9 @@ class Details_history extends Model
     //     'email',
     //     'password',
     // ];
+    protected $table = 'details_history';
+    protected $primaryKey = 'id_detail_history';
+
     protected $guarded = ['id_detail_history', 'temperature', 'weight', 'heart_rate', 'observation', 'id_employee', 
                         'id_medical_history', 'create_time', 'update_time', 'state_record'];
 

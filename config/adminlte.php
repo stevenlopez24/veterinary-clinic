@@ -314,12 +314,12 @@ return [
         ['header' => 'MODULOS'],
         [
             'text' => 'Nuevas Mascotas',
-            'url'  => 'management/pets',
+            'url'  => 'management/medical_history',
             'icon' => 'fa fa-paw',
         ],
         [
-            'text' => 'Historia Clinica',
-            'url'  => 'management/details_history',
+            'text' => 'Visita Medica',
+            'url'  => 'management/detail_history',
             'icon' => 'fa fa-heartbeat',
         ],
         [

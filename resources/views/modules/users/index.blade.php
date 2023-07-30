@@ -3,7 +3,7 @@
 @section('title', 'Usuarios')
 
 @section('content_header')
-<h1>{{ __('Users management') }}</h1>
+<h1>{{ __('Users') }}</h1>
 @stop
 
 @section('content')
@@ -21,7 +21,7 @@
                             <th class="text-center">{{ __('NAME') }}</th>
                             <th class="text-center">{{ __('EMAIL') }}</th>
                             <th class="text-center">{{ __('ROLE') }}</th>
-                            <th class="text-center">{{ __('CREATION TIME') }}</th>
+                            <th class="text-center">{{ __('CREATE_TIME') }}</th>
                         </tr>
                     </thead>
                     <tbody>
