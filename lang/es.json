@@ -1,5 +1,15 @@
 {
     "(and :count more error)": "(y :count error más)",
+    "Users":"Usuarios",
+    "Pets management":"Gestión de Mascotas",
+    "NAME_PET":"Nombre",
+    "BREED":"Raza",
+    "GENDER":"Genero",
+    "NAME_CUSTOMER":"Propietario",
+    "DOCUMENT":"Documento",
+    "See More":"Ver más",
+    
+
     "(and :count more errors)": "(y :count errores más)",
     "A fresh verification link has been sent to your email address.": "Se ha enviado un nuevo enlace de verificación a su correo electrónico.",
     "All rights reserved.": "Todos los derechos reservados.",

@@ -2,17 +2,19 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-// use Spatie\Permission\Traits\HasRoles;
+use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class Details_history extends Model
 {
+    use HasFactory;
     use HasApiTokens, HasFactory, Notifiable;
     // use HasRoles;
+    public $timestamps = False;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -23,7 +25,9 @@ class User extends Authenticatable
     //     'email',
     //     'password',
     // ];
-    protected $guarded = [];
+    protected $guarded = ['id_detail_history', 'temperature', 'weight', 'heart_rate', 'observation', 'id_employee', 
+                        'id_medical_history', 'create_time', 'update_time', 'state_record'];
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -39,16 +43,8 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
+
 
     const CREATED_AT = 'create_time';
     const UPDATED_AT = 'update_time';
-
-    public function roles()
-    {
-        return $this->belongsToMany(Model_has_role::class)->withTimestamps();
-    }
 }
