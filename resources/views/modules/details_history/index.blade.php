@@ -13,13 +13,12 @@
             <div class="col-sm-5 card px-2 p-2 rounded d-flex align-items-center">
                 <div class="col-sm-10 card px-2 p-2 rounded">
                     <a class="btn btn-success btn-lg " href="">
-                        <i class="fas fa-edit"></i> {{ __('Nueva historia') }}
+                        <i class="fas fa-edit"></i> {{ __('Nuevo registro') }}
                     </a>
                 </div>
             </div>
         </div>
         <div class="card px-3 p-3 rounded">
-
             <div class="dataTables_length">
                 <table id="tabla" class="table table-striped">
 
@@ -45,7 +44,7 @@
                             <td class="text-center">{{ $deta->customer_name }}</td>
                             <td class="text-center">{{ $deta->document }}</td>
                             <td class="text-center">{{ $deta->document_name }}</td>
-                            <td class="text-center">{{ $deta->user_name }}</td> 
+                            <td class="text-center">{{ $deta->user_name }}</td>
                             <td class="text-center">
                                 <a class="btn btn-info btn-sm" href="{{ route('detail_history.show', $deta->id_detail_history) }}"><i class="fas fa-eye"></i> {{ __('See More') }} </a>
                             </td>
@@ -54,7 +53,7 @@
                                 if ($deta->state_record == 'ACTIVO') {
                                 ?>
                                     <form class="formulario-disable" action="{{route('detail_history.delete', $deta->id_detail_history) }}" method="get">
-                                        <button class="btn btn-danger btn-sm "><i class="fas fa-lock"></i> {{ __('Disable') }}</button>
+                                        <button class="btn btn-danger btn-sm "><i class="fa fa-trash" aria-hidden="true"></i> {{ __('Disable') }}</button>
                                     </form>
                                 <?php
                                 }
@@ -67,47 +66,48 @@
             </div>
         </div>
     </div>
-    @stop
+</div>
+@stop
 
 
-    @section('css')
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
+@section('css')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
 
-    @stop
+@stop
 
-    @section('js')
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@section('js')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="{{asset('js/datatables.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{{asset('js/datatables.js')}}"></script>
 
 
-    @if(session('update')) {
-    <script>
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        })
+@if(session('update')) {
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
 
-        Toast.fire({
-            icon: 'success',
-            title: 'PQRS actualizada'
-        })
-    </script>
-    }
-    @endif
+    Toast.fire({
+        icon: 'success',
+        title: 'PQRS actualizada'
+    })
+</script>
+}
+@endif
 
-    
+
 <script>
     $('.formulario-disable').submit(function(e) {
         e.preventDefault();
@@ -164,4 +164,4 @@
     })
 </script>
 
-    @stop
+@stop

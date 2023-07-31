@@ -30,8 +30,10 @@ Route::get('management/users', [App\Http\Controllers\UserController::class, 'ind
 
 
 Route::get('management/medical_history', [App\Http\Controllers\Medical_historyController::class, 'index'])->name('medical_history.index');
-Route::get('management/medical_history/{m_h}', [App\Http\Controllers\Medical_historyController::class, 'show'])->name('medical_history.show');
-Route::get('management/medical_history/{id}/distroy', [App\Http\Controllers\Medical_historyController::class, 'destroy'])->name('medical_history.delete');
+Route::POST('management/medical_history/create', [App\Http\Controllers\Medical_historyController::class, 'create'])->name('medical_history.create');
+Route::POST('management/medical_history/create_old', [App\Http\Controllers\Medical_historyController::class, 'create_old'])->name('medical_history.create_old');
+Route::get('management/medical_history/show/{m_h}', [App\Http\Controllers\Medical_historyController::class, 'show'])->name('medical_history.show');
+Route::get('management/medical_history/distroy/{id}', [App\Http\Controllers\Medical_historyController::class, 'destroy'])->name('medical_history.delete');
 
 
 

@@ -313,7 +313,7 @@ return [
         ],
         ['header' => 'MODULOS'],
         [
-            'text' => 'Nuevas Mascotas',
+            'text' => 'Clientes',
             'url'  => 'management/medical_history',
             'icon' => 'fa fa-paw',
         ],

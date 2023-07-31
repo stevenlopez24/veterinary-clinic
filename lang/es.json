@@ -19,6 +19,21 @@
     "WEIGHT":"Peso",
     "HEART_RATE":"Frecuencia cardiaca",
     "OBSERVATION":"Observación",
+    "FEMALE":"Femenino",
+    "MALE":"Masculino",
+    "OTHER":"Otro",
+    "FEMALE_":"Hembra",
+    "MALE_":"Macho",
+    "CITIZENSHIP_CARD":"Cédula de Ciudadanía",
+    "IDENTITY_CARD":"Tarjeta de identidad",
+    "PASSPORT":"Pasaporte",
+    "FOREIGNER_ID":"Cédula de Extranjería",
+
+
+    
+
+
+
 
     "CREATE_TIME":"Fecha de creación",
     "UPDATE_TIME":"Fecha de modificación",
@@ -37,6 +52,7 @@
     "Return":"Salir",
     "Disable":"Eliminar",
     "Edit":"Editar",
+    "SAVE":"Guardar",
     
 
     "(and :count more errors)": "(y :count errores más)",

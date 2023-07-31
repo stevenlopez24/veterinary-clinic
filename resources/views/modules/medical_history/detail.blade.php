@@ -60,7 +60,7 @@
                             if ($detail->medical_history_state_record == 'ACTIVO') {
                             ?>
                                 <form class="formulario-disable" action="{{ route('medical_history.delete', $detail->id_medical_history) }}" method="GET">
-                                    <button class="btn btn-danger mr-1"><i class="fas fa-lock"></i> {{ __('Disable') }}</button>
+                                    <button class="btn btn-danger mr-1"><i class="fa fa-trash" aria-hidden="true"></i> {{ __('Disable') }}</button>
                                 </form>
                             <?php
                             }
