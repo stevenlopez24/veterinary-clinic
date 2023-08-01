@@ -25,6 +25,9 @@ class Customer extends Model
     //     'email',
     //     'password',
     // ];
+
+    protected $primaryKey = 'id_customer';
+
     protected $guarded = ['id_customer', 'name', 'gender', 'document', 'create_time', 'update_time', 'state_record'];
 
     /**
@@ -43,7 +46,4 @@ class Customer extends Model
      * @var array<string, string>
      */
 
-
-    const CREATED_AT = 'create_time';
-    const UPDATED_AT = 'update_time';
 }

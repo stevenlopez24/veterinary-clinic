@@ -3,7 +3,8 @@
 @section('title', 'Usuarios')
 
 @section('content_header')
-<h1>{{ __('Users') }}</h1>
+<h1 style="font-weight: bold;text-align: center;">{{ __('Users') }}</h1>
+<br><br>
 @stop
 
 @section('content')
@@ -20,7 +21,6 @@
                         <tr>
                             <th class="text-center">{{ __('NAME') }}</th>
                             <th class="text-center">{{ __('EMAIL') }}</th>
-                            <th class="text-center">{{ __('ROLE') }}</th>
                             <th class="text-center">{{ __('CREATE_TIME') }}</th>
                         </tr>
                     </thead>
@@ -29,7 +29,6 @@
                         <tr>
                             <td class="text-center">{{ $user->name }}</td>
                             <td class="text-center">{{ $user->email }}</td>
-                            <td class="text-center">{{ $user->role_name }}</td>
                             <td class="text-center">{{ date('d/m/Y', strtotime($user->create_time)) }}</td>                            
                         </tr>
                         @endforeach

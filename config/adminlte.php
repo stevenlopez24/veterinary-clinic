@@ -256,9 +256,9 @@ return [
     'dashboard_url' => 'home',
     'logout_url' => 'logout',
     'login_url' => 'login',
-    'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
-    'password_email_url' => 'password/email',
+    'register_url' => false,
+    'password_reset_url' =>false,
+    'password_email_url' => false,
     'profile_url' => false,
 
     /*
@@ -292,7 +292,7 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type'         => 'navbar-search',
+            'type'         => false,
             'text'         => 'search',
             'topnav_right' => true,
         ],
@@ -313,12 +313,12 @@ return [
         ],
         ['header' => 'MODULOS'],
         [
-            'text' => 'Clientes',
+            'text' => 'Historia Médica',
             'url'  => 'management/medical_history',
             'icon' => 'fa fa-paw',
         ],
         [
-            'text' => 'Visita Medica',
+            'text' => 'Registro Médico',
             'url'  => 'management/detail_history',
             'icon' => 'fa fa-heartbeat',
         ],
